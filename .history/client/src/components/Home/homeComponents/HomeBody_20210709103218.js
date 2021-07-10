@@ -182,8 +182,7 @@ export default function HomeBody({ match }) {
                               <div className="starRating">
                                 <Star />
                                 <div className="serviceRating">
-                                  {service &&
-                                    String(service.ratings).substring(0, 3)}
+                                  {service.ratings}
                                 </div>
                               </div>
                               <br />
