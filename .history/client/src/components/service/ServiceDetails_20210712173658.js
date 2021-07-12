@@ -190,10 +190,7 @@ const ServiceDetails = () => {
                               </div>
                               <h6 className="h6bold li">Overall Rate</h6>
                             </div>
-                            <h6 className="h6bold">
-                              {service &&
-                                String(service.ratings).substring(0, 3)}
-                            </h6>
+                            <h6 className="h6bold">{service.ratings}</h6>
                           </div>
                           <div className="bodydetails">
                             <div className="leftdetails">

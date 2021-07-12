@@ -100,8 +100,7 @@ export const MyServices = () => {
                               {/* <Star /> */}
                               <FaStar size="25" color="orange" />
                               <div className="serviceRating">
-                                {service &&
-                                  String(service.ratings).substring(0, 3)}
+                                {service.ratings}
                               </div>
                             </div>
                             <br />

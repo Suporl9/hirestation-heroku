@@ -140,8 +140,7 @@ export const UserProfile = () => {
                                 <FaStar size="22" color="orange" />
 
                                 <div className="serviceRating">
-                                  {service &&
-                                    String(service.ratings).substring(0, 3)}
+                                  {service.ratings}
                                 </div>
                               </div>
                               <br />

@@ -99,8 +99,7 @@ const ServiceDetails = () => {
                           className="serviceRating1"
                           // style={{ marginLeft: "2%" }}
                         >
-                          {service && String(service.ratings).substring(0, 3)}
-                          &nbsp;
+                          {service.ratings}&nbsp;
                         </div>
                         <div className="no_of_reviews1">
                           {service.numOfReviews > 1 ? (
@@ -160,8 +159,7 @@ const ServiceDetails = () => {
                                 className="serviceRating"
                                 style={{ fontWeight: "bold" }}
                               >
-                                {service &&
-                                  String(service.ratings).substring(0, 3)}
+                                {service.ratings}
                               </div>
                             </div>
                             <div className="pricecardtitle">
@@ -190,10 +188,7 @@ const ServiceDetails = () => {
                               </div>
                               <h6 className="h6bold li">Overall Rate</h6>
                             </div>
-                            <h6 className="h6bold">
-                              {service &&
-                                String(service.ratings).substring(0, 3)}
-                            </h6>
+                            <h6 className="h6bold">{service.ratings}</h6>
                           </div>
                           <div className="bodydetails">
                             <div className="leftdetails">

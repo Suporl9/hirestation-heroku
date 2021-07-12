@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { saveOrderInfo } from "../redux/cart/cartActions";
 import { CheckOutSteps } from "./CheckOutSteps";
-import { getStripeApiKey } from "../redux/stripeKey/stripeAction";
 
 export const OrderInfo = () => {
   const history = useHistory();
@@ -17,9 +16,11 @@ export const OrderInfo = () => {
     dispatch(saveOrderInfo({ phoneNumber }));
     history.push("/order/confirm");
   };
-  useEffect(() => {
-    dispatch(getStripeApiKey());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   if (orderInfo) {
+  //     setPhoneNumber(orderInfo.phoneNumber);
+  //   }
+  // }, [orderInfo]);
   return (
     <div className="bg1">
       <CheckOutSteps orderInfo />

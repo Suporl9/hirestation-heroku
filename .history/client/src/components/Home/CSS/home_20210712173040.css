@@ -2169,9 +2169,5 @@ input[type="radio"] {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;
-  }
-  .titlerow1 {
-    margin: 15% 0 10% 0;
   }
 }

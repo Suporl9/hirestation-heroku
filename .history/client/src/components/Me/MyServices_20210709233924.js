@@ -45,9 +45,7 @@ function MyServices() {
                 <div className="ratings">
                   <div className="starRating">
                     <Star />
-                    <div className="serviceRating">
-                      {service && String(service.ratings).substring(0, 3)}
-                    </div>
+                    <div className="serviceRating">{service.ratings}</div>
                   </div>
                   <br />
                   <div className="no_of_reviews">

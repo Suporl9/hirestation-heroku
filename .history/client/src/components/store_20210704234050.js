@@ -29,8 +29,6 @@ import {
   userUpdateReducer,
 } from "./redux/user/userReducer";
 
-import { getStripeReducer } from "./redux/stripeKey/stripeReducer";
-
 const rootReducer = combineReducers({
   services: serviceReducer,
   serviceDetails: serviceDetailsReducer,
@@ -49,7 +47,6 @@ const rootReducer = combineReducers({
   deleteOrUpdateService: deleteOrUpdateServiceReducer,
   updateOrder: updateOrderReducer,
   userDetails: userDetailsReducer,
-  getStripe: getStripeReducer,
 });
 
 const initialState = {};

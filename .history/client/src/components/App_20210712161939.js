@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   // Redirect,
@@ -28,6 +28,7 @@ import { getCartItems } from "./redux/cart/cartActions";
 import { OrderInfo } from "./orderAndPayment/OrderInfo";
 import { OrderConfirm } from "./orderAndPayment/OrderConfirm";
 import { OrderPayment } from "./orderAndPayment/OrderPayment";
+import axios from "axios";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { MyOrders } from "./Me/MyOrders";
@@ -52,7 +53,7 @@ import { getStripeApiKey } from "./redux/stripeKey/stripeAction";
 
 function App() {
   const dispatch = useDispatch();
-  const { stripeKey } = useSelector((state) => state.getStripe);
+  const { stripeKey, loading } = useSelector((state) => state.getStripe);
   // const {cart}
   useEffect(() => {
     dispatch(loadUser());
